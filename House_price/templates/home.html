@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>AI House Price Predictor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.hero{
+height:85vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+animation:fade 2s ease;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin-bottom:30px;
+opacity:0.9;
+}
+
+button{
+padding:15px 40px;
+border:none;
+border-radius:50px;
+font-size:16px;
+background:linear-gradient(45deg,#00f2fe,#4facfe);
+color:white;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+button:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 30px rgba(0,0,0,0.4);
+}
+
+.features{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:60px 20px;
+flex-wrap:wrap;
+}
+
+.card{
+background:rgba(255,255,255,0.1);
+padding:30px;
+border-radius:20px;
+width:280px;
+backdrop-filter:blur(10px);
+text-align:center;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,0.2);
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="nav">
+<div class="logo">🏠 AI Price Predictor</div>
+<div>Machine Learning Project</div>
+<h5 style="margin-left:20px; font-size:14px; opacity:0.8;">Made By Prince Kanojiya</h5>
+
+</div>
+
+<div class="hero">
+<h1>Predict House Prices with AI</h1>
+<p>
+This intelligent system uses Machine Learning algorithms to predict
+real estate prices based on multiple features like area, bedrooms,
+parking, furnishing status and more.
+</p>
+
+<form action="/predict_page">
+<button>Start Prediction</button>
+</form>
+</div>
+
+<div class="features">
+
+<div class="card">
+<h3>⚡ Fast Prediction</h3>
+<p>Instant results using trained regression model.</p>
+</div>
+
+<div class="card">
+<h3>📊 Accurate Model</h3>
+<p>Built using real housing dataset and ML algorithms.</p>
+</div>
+
+<div class="card">
+<h3>🎯 Smart Features</h3>
+<p>Includes multiple property features for better accuracy.</p>
+</div>
+
+</div>
+
+</body>
+</html>

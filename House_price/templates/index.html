@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Predict House Price</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#141e30,#243b55);
+}
+
+.container{
+background:rgba(255,255,255,0.1);
+padding:40px;
+border-radius:20px;
+width:70%;
+max-width:800px;
+backdrop-filter:blur(15px);
+box-shadow:0 15px 35px rgba(0,0,0,0.4);
+color:white;
+animation:fade 1.5s ease;
+}
+
+h1{
+text-align:center;
+margin-bottom:25px;
+}
+
+form{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+}
+
+input,select{
+width:48%;
+padding:12px;
+margin-bottom:15px;
+border:none;
+border-radius:10px;
+background:rgba(255, 255, 255, 0.082);
+color:white;
+outline:none;
+transition:0.3s;
+}
+
+input:focus,select:focus{
+background:rgba(101, 173, 209, 0.3);
+transform:scale(1.05);
+}
+
+button{
+width:100%;
+padding:14px;
+margin-top:10px;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,#00f2fe,#4facfe);
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.4s;
+}
+
+button:hover{
+transform:translateY(-5px);
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Enter Property Details</h1>
+
+<form action="/predict" method="POST">
+
+<input type="number" name="area" placeholder="Area (sq ft)" required>
+<input type="number" name="bedrooms" placeholder="Bedrooms" required>
+
+<input type="number" name="bathrooms" placeholder="Bathrooms" required>
+<input type="number" name="stories" placeholder="Stories" required>
+
+<select name="mainroad">
+<option value="1">Main Road - Yes</option>
+<option value="0">Main Road - No</option>
+</select>
+
+<select name="guestroom">
+<option value="1">Guestroom - Yes</option>
+<option value="0">Guestroom - No</option>
+</select>
+
+<select name="basement">
+<option value="1">Basement - Yes</option>
+<option value="0">Basement - No</option>
+</select>
+
+<select name="hotwaterheating">
+<option value="1">Hot Water Heating - Yes</option>
+<option value="0">Hot Water Heating - No</option>
+</select>
+
+<select name="airconditioning">
+<option value="1">Air Conditioning - Yes</option>
+<option value="0">Air Conditioning - No</option>
+</select>
+
+<input type="number" name="parking" placeholder="Parking Spaces" required>
+
+<select name="prefarea">
+<option value="1">Preferred Area - Yes</option>
+<option value="0">Preferred Area - No</option>
+</select>
+
+<select name="furnishingstatus">
+<option value="2">Furnished</option>
+<option value="1">Semi-Furnished</option>
+<option value="0">Unfurnished</option>
+</select>
+
+<button type="submit">Predict Price</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
