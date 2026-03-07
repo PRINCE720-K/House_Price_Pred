@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # Load Saved Model, Scaler, and Feature Names
-model = joblib.load('house_price_model.joblib')
+model = joblib.load('House_price_model.joblib')
 sc = joblib.load('scaler.joblib')
 feature_names = joblib.load('features.joblib')
 
